@@ -10,13 +10,13 @@
   }
 </script>
 
-<style lang="scss" scoped>
-  .slde {
+<style scoped>
+  .slide {
     width: 100%;
     flex-shrink: 0;
   }
 
-  .slde img {
+  .slide img {
     width: 100%;
   }
 

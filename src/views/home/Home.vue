@@ -67,7 +67,7 @@ import HomeSwiper from './childComps/HomeSwiper'
       }
     },
     computed: {
-      showGood() {
+      showGoods() {
         return this.goods[this.currentType].list
       }
     },

@@ -25,7 +25,7 @@
         default: 3000
       },
       //动画时间
-      animUdration: {
+      animDuration: {
         type: Number,
         default: 300
       },
@@ -83,7 +83,7 @@
 
           //2.结束移动后的回调
           this.$emit('transitionEnd',this.currentIndex-1);
-        },this.animUdration)
+        },this.animDuration)
 
       },
       /**
@@ -94,7 +94,7 @@
         this.scrolling = true;
 
         //1.开始滚动动画
-        this.swiperStyle.transition ='transform' +this.animUdration + 'ms';
+        this.swiperStyle.transition ='transform' +this.animDuration + 'ms';
         this.setTransform(currentPosition);
 
         //2.判断滚动到的位置

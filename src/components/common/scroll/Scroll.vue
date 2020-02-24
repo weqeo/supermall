@@ -29,7 +29,7 @@ import BScroll from 'better-scroll'
     },
     mounted(){
       //1.创建bscroll对象,传入要包含的滑动的对象标签
-      this.scroll = new BScroll(this.$$refs.wrapper,{
+      this.scroll = new BScroll(this.$refs.wrapper,{
         click: true,
         probeType: this.probeType,
         pullUpLoad: this.pullUpLoad
@@ -60,6 +60,9 @@ import BScroll from 'better-scroll'
       },
       getScrollY(){
         return this.scroll ? this.scroll.y : 0
+      },
+      finishPullUp() {
+        this.scroll && this.scroll.finishPullUp()
       }
     },
   }
