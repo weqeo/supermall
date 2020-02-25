@@ -137,6 +137,8 @@ import HomeSwiper from './childComps/HomeSwiper'
        */
       getHomeMultidata() {
         getHomeMultidata().then(res => {
+          console.log(res.data.banner.list);
+          
           this.banners = res.data.banner.list;
           this.recommends = res.data.recommend.list;
         })
@@ -144,6 +146,8 @@ import HomeSwiper from './childComps/HomeSwiper'
       getHomeGoods(type) {
         const page = this.goods[type].page + 1
         getHomeGoods(type, page).then(res => {
+          console.log(res.data);
+          
           this.goods[type].list.push(...res.data.list)
           this.goods[type].page += 1
 
