@@ -25,7 +25,16 @@
         this.$bus.$emit('itemImageLoad')
       },
       itemClick() {
+        console.log('跳转到详情页');
+        
         this.$router.push('/detail/' + this.goodsItem.iid)
+        //query de chuandi fangshi 
+        // this.$router.push({
+        //   path: '/detail',
+        //   query: {
+        //     id: this.goodsItem.iid
+        //   }
+        // })
       }
     }
   }

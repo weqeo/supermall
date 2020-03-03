@@ -77,9 +77,12 @@ import HomeSwiper from './childComps/HomeSwiper'
     activated() {
       this.$refs.scroll.scrollTo(0,this.saveY,0)
       this.$refs.scroll.refresh()
+      console.log('activated'+ this.saveY);
     },
     deactivated() {
       this.saveY = this.$refs.scroll.getScrollY()
+      console.log(this.saveY);
+      
     },
     created() {
       // 1.请求多个数据
