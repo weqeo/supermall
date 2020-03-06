@@ -23,3 +23,22 @@ export class Goods {
     this.services = services;
   }
 }
+
+export class Shop {
+  constructor(shopInfo){
+    this.logo = shopInfo.shopLogo;
+    this.score = shopInfo.score; //数组
+    //this.fans = shopInfo.cFans;
+    this.goods = shopInfo.cGoods;
+    this.sells = shopInfo.cSells;
+    this.name = shopInfo.name;
+  }
+}
+export class GoodsParam {
+  constructor(info, rule) {
+    this.image = info.images ? info.images[0] : "";
+    this.infos = info.set;
+    this.sizes = rule.tables;
+  }
+}
+
